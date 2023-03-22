@@ -18,17 +18,25 @@ const App = () => {
  }, [dispatch]);
 
    return (
-     <div>
+     <div
+      //  style={{
+      //    height: '100vh',
+      //    display: 'flex',
+      //    justifyContent: 'center',
+      //    alignItems: 'center',
+      //    fontSize: 40,
+      //    color: '#010101',
+      //  }}
+     >
        <SectionTitle title="Phonebook">
-         <ContactsForm/>
+         <ContactsForm />
        </SectionTitle>
-       
+
        {isLoading && !error && <b>Request in progress...</b>}
        <SectionTitle title="Contacts">
-        <FilterContacts />
-        <ContactsList />
+         <FilterContacts />
+         <ContactsList />
        </SectionTitle>
-      
      </div>
    );
 
