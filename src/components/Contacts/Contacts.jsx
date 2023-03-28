@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { deleteContact } from 'redux/operations';
-import { selectFilteredContacts } from 'redux/selector';
+import { deleteContact } from 'redux/contacts/operations';
+import { selectFilteredContacts } from 'redux/contacts/selector';
 import { useSelector, useDispatch } from 'react-redux';
 
-const ContactsList = () => {
+const Contacts = () => {
   const contacts = useSelector(selectFilteredContacts);
   const dispatch = useDispatch();
 
@@ -13,11 +13,20 @@ const ContactsList = () => {
   };
 
   return (
-    <ul>
-      {contacts.map(({ id, name, phone }) => (
-        <li key={id}>
+    <ul style={{ ml: 'auto', mr: 'auto', width: '48ch' }}>
+      {contacts.map(({ id, name, number }) => (
+        <li
+          key={id}
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            p: 0,
+            mb: '16px',
+            width: '100%',
+          }}
+        >
           <p>
-            {name}: {phone}
+            {name}: {number}
           </p>
           <button type="button" onClick={() => onDelContact(id)}>
             Delete
@@ -27,14 +36,14 @@ const ContactsList = () => {
     </ul>
   );
 };
-ContactsList.prototype = {
+Contacts.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      phone: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
     })
   ),
 };
 
-export default ContactsList;
+export default Contacts;
