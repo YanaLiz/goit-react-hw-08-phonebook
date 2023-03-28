@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { deleteContact } from 'redux/contacts/operations';
 import { selectFilteredContacts } from 'redux/contacts/selector';
 import { useSelector, useDispatch } from 'react-redux';
+import {ColorButton } from '../styled/styledMui'
 
 const Contacts = () => {
   const contacts = useSelector(selectFilteredContacts);
@@ -13,13 +14,24 @@ const Contacts = () => {
   };
 
   return (
-    <ul style={{ ml: 'auto', mr: 'auto', width: '48ch' }}>
+    <ul
+      style={{
+        ml: 'auto',
+        mr: 'auto',
+        width: '48ch',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+      }}
+    >
       {contacts.map(({ id, name, number }) => (
         <li
           key={id}
           style={{
             display: 'flex',
             justifyContent: 'space-between',
+            color: 'rgb(73, 77, 95)',
+            fontFamily: 'Segoe UI',
+            fontSize: '18px',
             p: 0,
             mb: '16px',
             width: '100%',
@@ -28,9 +40,24 @@ const Contacts = () => {
           <p>
             {name}: {number}
           </p>
-          <button type="button" onClick={() => onDelContact(id)}>
+          <ColorButton
+            type="button"
+            onClick={() => onDelContact(id)}
+            style={{
+              marginBottom: '5px',
+              padding: '3px',
+              fontSize: '12px',
+              border: '1px solid #799d91',
+              borderRadius: `8px`,
+              '&:hover': {
+                backgroundColor: `#40cd9e`,
+                color: `#fff`,
+                border: `1px solid #799d91`,
+              },
+            }}
+          >
             Delete
-          </button>
+          </ColorButton>
         </li>
       ))}
     </ul>

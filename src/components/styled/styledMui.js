@@ -12,12 +12,12 @@ export const ColorLinkButton = styled(ListItemButton)(() => ({
   justifyContent: 'center',
   '&:hover': {
     borderRadius: `8px`,
-    backgroundColor: 'rgba(132, 88, 179, 0.3)',
+    backgroundColor: '#40cd9e',
     color: '#e5eaf5',
   },
   '&.active': {
-    backgroundColor: 'rgba(132,88,179, 0.5)',
-    color: 'neutral.main',
+    backgroundColor: `#40cd9e`,
+    color: '#fff',
     borderRadius: `8px`,
   },
 }));
@@ -25,30 +25,30 @@ export const ColorLinkButton = styled(ListItemButton)(() => ({
 export const ColorButton = styled(Button)(() => ({
   color: 'inherit',
   padding: '5px',
-  border: '1px solid rgb(132, 88, 179)',
+  border: '1px solid #799d91',
   borderRadius: `8px`,
   '&:hover': {
-    backgroundColor: `rgba(132, 88, 179, 0.5)`,
+    backgroundColor: `#40cd9e`,
     color: `#fff`,
-    border: `1px solid rgba(132, 88, 179, 0.5)`,
+    border: `1px solid #799d91`,
   },
 }));
 
 export const StyledInput = styled(Input)({
   marginBottom: '32px',
   '&.MuiInput-underline:after': {
-    borderBottomColor: '#8458B3',
+    borderBottomColor: '#799d91',
   },
 
   '&.MuiOutlinedInput-root': {
     '&.Mui-focused fieldset': {
-      borderColor: '#8458B3',
+      borderColor: '#799d91',
     },
   },
 });
 
 export const StyledInputLable = styled(InputLabel)({
   '&.Mui-focused': {
-    color: '#8458B3',
+    color: '#799d91',
   },
 });

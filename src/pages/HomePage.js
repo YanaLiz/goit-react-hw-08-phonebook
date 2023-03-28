@@ -15,7 +15,7 @@ import { Box } from '@mui/material';
         flexDirection: 'column',
       }}
     >
-      <SectionTitle title="Task manager welcome page">
+      <SectionTitle title="Contacts manager welcome page">
         {/* <span role="img" aria-label="Greeting icon">
           💁‍♀️
         </span> */}

@@ -1,9 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { logIn } from 'redux/auth/operations';
-// import css from './LoginForm.module.css';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-// import { IconButton, InputAdornment } from '@mui/material';
 import { Box, FormControl, IconButton, InputAdornment } from '@mui/material';
 import {
   ColorButton,
@@ -59,7 +57,6 @@ const LoginForm = () => {
           Email
         </StyledInputLable>
         <StyledInput
-          // label="Email"
           id="standard-adornment-email"
           variant="standard"
           type="email"

@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { List, ListItem } from '@mui/material';
 import { ColorLinkButton } from 'components/styled/styledMui';
-// import css from './AuthNav.module.css';
 
  const AuthNav = () => {
   return (

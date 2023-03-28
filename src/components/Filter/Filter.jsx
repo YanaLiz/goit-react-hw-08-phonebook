@@ -3,7 +3,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { addFilter } from 'redux/contacts/filterSlice';
 import { selectFilter } from '../../redux/contacts/selector';
-// import css from './Filter.module.css'
 import { FormControl } from '@mui/material';
 import { StyledInput, StyledInputLable } from 'components/styled/styledMui';
 

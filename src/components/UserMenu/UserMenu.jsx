@@ -20,8 +20,6 @@ const UserMenu = () => {
       <Typography>Welcome, {user.name}!</Typography>
       <ColorButton
         variant="outlined"
-        // bgColor="rgba(132, 88, 179, 0.3)"
-        // textColor="#e5eaf5"
         onClick={() => dispatch(logOut())}
       >
         Logout
